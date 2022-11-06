@@ -2,12 +2,13 @@ from flask import Flask, request, Response, make_response
 import requests
 app = Flask(__name__)
 
-
-@app.route('/')
-def catch_all():
-    return Response("<h1>Flask</h1><p>", mimetype="text/html")
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
+    return Response("<h1>Flask</h1><p>You visited: /%s</p>" % (path), mimetype="text/html")
 
 @app.route('/madou')
+@app.route('/<path:path>')
 def madou():
     key = 'pnhXgN0U'
     iv = 'GY4gEvBD'
@@ -19,7 +20,7 @@ def madou():
     # img = requests.get(url).content
     # des = DES.new(key=key.encode(), mode=DES.MODE_CBC, iv=iv.encode())
     # return des.decrypt(pad(img, 16, style='pkcs7'))
-    return Response(url, mimetype="text/html")
+    return url
 
 # from http.server import BaseHTTPRequestHandler
  
