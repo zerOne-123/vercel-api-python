@@ -8,7 +8,8 @@ def catch_all(path):
     return 'hello'
 
 @app.route('/madou', methods=['GET'])
-def madou():
+@app.route('/<path:path>')
+def madou(path):
     key = 'pnhXgN0U'
     iv = 'GY4gEvBD'
     url = request.args.get("url")
