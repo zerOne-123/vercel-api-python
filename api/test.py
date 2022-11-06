@@ -5,5 +5,5 @@ app = Sanic(name="myApp")
 @app.route('/')
 @app.route('/<path:path>')
 async def index(request, path=""):
-  print(request)
+  # print(request)
   return json({'hello': path})
