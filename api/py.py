@@ -8,7 +8,7 @@ app = Flask(__name__)
 #     return Response("<h1>Flask</h1><p>You visited: /%s</p>" % (path), mimetype="text/html")
 
 @app.route("/madou",methods=["GET"])
-def img():
+def madou():
     key = 'pnhXgN0U'
     iv = 'GY4gEvBD'
     url = request.args.get("url")
@@ -16,10 +16,10 @@ def img():
     if url == '':
         return ""
     
-    img = requests.get(url).content
+    # img = requests.get(url).content
     # des = DES.new(key=key.encode(), mode=DES.MODE_CBC, iv=iv.encode())
     # return des.decrypt(pad(img, 16, style='pkcs7'))
-    return img
+    return url
 
 # from http.server import BaseHTTPRequestHandler
  
