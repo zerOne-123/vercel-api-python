@@ -5,7 +5,7 @@ import base64
 
 app = Flask(__name__)
 
-# @app.route('/')
+@app.route('/')
 @app.route('/<path:path>')
 def test():
   name = request.args.get('name', 'py')
