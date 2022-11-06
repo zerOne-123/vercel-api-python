@@ -18,6 +18,8 @@ def madou():
   key = 'pnhXgN0U'
   iv = 'GY4gEvBD'
   url = request.args.get("url")
+  if not url:
+    return '请输入url参数'
   img = requests.get(url).content
   des = DES.new(key=key.encode(), mode=DES.MODE_CBC, iv=iv.encode())
   return base64.b64decode(des.decrypt(base64.b64decode(img)).decode().replace('data:image/jpg;base64,', ''))
