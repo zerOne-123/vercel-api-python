@@ -7,7 +7,7 @@ app = Flask(__name__)
 def catch_all(path):
     return 'hello'
 
-@app.route('/madou')
+@app.route('/madou', methods=['GET'])
 def madou():
     key = 'pnhXgN0U'
     iv = 'GY4gEvBD'
