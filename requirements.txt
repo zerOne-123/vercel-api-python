@@ -1,4 +1,3 @@
 Flask
-sanic
 requests
 pycryptodome
