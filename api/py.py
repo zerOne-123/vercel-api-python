@@ -3,8 +3,8 @@ import requests
 app = Flask(__name__)
 
 @app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def catch_all(path):
+# @app.route('/<path:path>')
+def ff(path):
     return 'hello'
 
 @app.route('/madou', methods=['GET'])
