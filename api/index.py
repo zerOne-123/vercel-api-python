@@ -5,15 +5,15 @@ import base64
 
 app = Flask(__name__)
 
-@app.route('/py/')
+@app.route('/')
 def hello():
   return 'Hello, world'
 
-@app.route('/py/test')
+@app.route('/test')
 def test():
   return 'Test'
 
-@app.route('/py/madou')
+@app.route('/madou')
 def madou():
   key = 'pnhXgN0U'
   iv = 'GY4gEvBD'
