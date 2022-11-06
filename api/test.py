@@ -2,7 +2,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/<path:path>')
-def test(path):
-  name = request.args.get('name', 'py')
+@app.route('/')
+def test():
+  name = request.args.get('name', 'pky')
   return 'Hello ' + name
