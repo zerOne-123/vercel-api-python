@@ -1,6 +1,6 @@
 from sanic import Sanic
 from sanic.response import json
-app = Sanic(name="myApp")
+app = Sanic(name='api')
 
 @app.route('/')
 @app.route('/<path:path>')
