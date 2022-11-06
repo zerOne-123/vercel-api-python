@@ -9,7 +9,7 @@ app = Flask(__name__)
 def hello():
   return 'Hello, world'
 
-@app.route('/test')
+@app.route('/py/test')
 def test():
   return 'Test'
 
