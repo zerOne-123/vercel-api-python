@@ -5,7 +5,7 @@ import base64
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/py/')
 def hello():
   return 'Hello, world'
 
@@ -13,7 +13,7 @@ def hello():
 def test():
   return 'Test'
 
-@app.route('/madou')
+@app.route('/py/madou')
 def madou():
   key = 'pnhXgN0U'
   iv = 'GY4gEvBD'
