@@ -13,11 +13,6 @@ def hello():
 def test():
   return 'Test'
 
-@app.route('/api/test/m')
-def test():
-  name = request.args.get('name', 'py')
-  return 'index /api/test/m ' + name
-
 @app.route('/madou')
 def madou():
   key = 'pnhXgN0U'
