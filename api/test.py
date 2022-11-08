@@ -13,12 +13,12 @@ def test2():
   return '/api/test ' + name
 
 @app.route('/api/b')
-def test5():
+def test6():
   name = request.args.get('name', 'py')
   return '/api/b ' + name
 
 @app.route('/api')
-def test5():
+def test7():
   name = request.args.get('name', 'py')
   return '/api ' + name
 
