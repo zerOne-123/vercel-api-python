@@ -12,6 +12,11 @@ def hello():
 @app.route('/test')
 def test():
   return 'Test'
+  
+@app.route('/api/test/m')
+def test4():
+  name = request.args.get('name', 'py')
+  return '/api/test/m ' + name
 
 @app.route('/madou')
 def madou():
