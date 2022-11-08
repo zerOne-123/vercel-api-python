@@ -1,0 +1,33 @@
+from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route('/')
+def test1():
+  name = request.args.get('name', 'py')
+  return '/ ' + name
+
+@app.route('/api/test')
+def test2():
+  name = request.args.get('name', 'py')
+  return '/api/test ' + name
+
+@app.route('/api/b')
+def test6():
+  name = request.args.get('name', 'py')
+  return '/api/b ' + name
+
+@app.route('/api')
+def test7():
+  name = request.args.get('name', 'py')
+  return '/api ' + name
+
+@app.route('/api/a/b')
+def test4():
+  name = request.args.get('name', 'py')
+  return '/api/a/b ' + name
+
+@app.route('/<path:path>')
+def test5(path):
+  name = request.args.get('name', 'py')
+  return 'Hello a b ' + name
