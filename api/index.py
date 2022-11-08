@@ -16,7 +16,7 @@ def test():
 @app.route('/api/test/m')
 def test4():
   name = request.args.get('name', 'py')
-  return '/api/test/m ' + name
+  return 'index /api/test/m ' + name
 
 @app.route('/madou')
 def madou():

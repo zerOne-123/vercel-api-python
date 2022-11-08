@@ -12,6 +12,16 @@ def test2():
   name = request.args.get('name', 'py')
   return '/api/test ' + name
 
+@app.route('/api/b')
+def test5():
+  name = request.args.get('name', 'py')
+  return '/api/b ' + name
+
+@app.route('/api')
+def test5():
+  name = request.args.get('name', 'py')
+  return '/api ' + name
+
 @app.route('/api/test/mm')
 def test3():
   name = request.args.get('name', 'py')
