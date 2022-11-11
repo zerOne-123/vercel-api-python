@@ -1,5 +1,4 @@
 const axios = require('axios');
-axios.defaults.adapter = require('axios/lib/adapters/http');
 
 module.exports = async (req, res) => {
   const { name = 'js' } = req.query;
