@@ -5,7 +5,7 @@ module.exports = async (req, res) => {
   // const html = await axios.get('https://www.baidu.com').then((res) => {
   //   return res.data;
   // });
-  const html = {}
+  let html = {}
   try {
     html = await axios.get('https://zxzj.vip');
   } catch (error) {
