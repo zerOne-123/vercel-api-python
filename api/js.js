@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require('axios').default;
 
 module.exports = async (req, res) => {
   const { name = 'js' } = req.query;
@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   // });
   const html = {}
   try {
-    html = await axios.get('https://www.baidu.com');
+    html = await axios.get('https://zxzj.vip');
   } catch (error) {
     console.log(error);
   }
