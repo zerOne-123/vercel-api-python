@@ -5,5 +5,6 @@ module.exports = async (req, res) => {
   // const html = await axios.get('https://www.baidu.com').then((res) => {
   //   return res.data;
   // });
-  return res.send('html');
+  const html = await axios.get('https://www.baidu.com')
+  return res.send(html);
 };
