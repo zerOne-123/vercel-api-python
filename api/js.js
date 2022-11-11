@@ -5,6 +5,11 @@ module.exports = async (req, res) => {
   // const html = await axios.get('https://www.baidu.com').then((res) => {
   //   return res.data;
   // });
-  const html = await axios.get('https://www.baidu.com');
-  return res.send(html);
+  const html = {}
+  try {
+    html = await axios.get('https://www.baidu.com');
+  } catch (error) {
+    console.log(error);
+  }
+  res.json(html);
 };
