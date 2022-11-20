@@ -35,19 +35,19 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type','text/plain')
         self.end_headers()
-        self.wfile.write(b'Hello from Python from a Serverless Function!')
+        self.wfile.write('Hello from Python from a Serverless Function!')
         return
 ```
 
 # Node.js 最佳实践
 
-> 文档：<https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/node-js>
+> 文档：<https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/node-js>  
 > nodejs api 文档：<https://nodejs.org/api/>
 
 ```bash
 ├── api
 |  ├── js.js
-└── package.json		// 添加模块
+└── package.json		  // 添加模块
 └── package-lock.json	// 该文件通过 npm 命令添加模块会自动生成
 ```
 ```json
@@ -97,7 +97,7 @@ module.exports = (req, res) => {
 
 ## Python 最佳实践
 
-> 文档：<https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python>
+> 文档：<https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python>  
 > Python 文档：<https://docs.python.org/zh-cn/3.9/index.html>
 
 ```bash
