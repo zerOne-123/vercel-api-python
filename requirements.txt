@@ -1,4 +1,4 @@
 Flask
-sanic==19.6.0
+sanic
 requests
 pycryptodome

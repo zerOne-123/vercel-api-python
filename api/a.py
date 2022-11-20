@@ -2,7 +2,7 @@ from sanic import Sanic
 from sanic.response import HTTPResponse, text
 from sanic.request import Request
 
-app = Sanic('vercel-api-python')
+app = Sanic('api')
 
 
 @app.route('/<path:path>')
