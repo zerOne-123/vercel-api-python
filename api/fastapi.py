@@ -3,8 +3,9 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.route('/<path:path>')
+@app.route(__name__)
 def main():
     return {
-        "message": "Hello my friend"
+        "message": "Hello my friend",
+        'a': __name__
     }
