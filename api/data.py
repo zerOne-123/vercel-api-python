@@ -4,5 +4,5 @@ app = Sanic("data")
 
 
 @app.route('/<path:path>')
-async def index(request, path=""):
+async def data(request, path=""):
     return json({'hello': path})
