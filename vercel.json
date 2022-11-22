@@ -1,3 +1,9 @@
 {
-  "rewrites": [{ "source": "/", "destination": "/README.md" }]
+  "rewrites": [
+    { "source": "/", "destination": "/README.md" },
+    {
+      "source": "/(.*)",
+      "destination": "/api"
+    }
+  ]
 }

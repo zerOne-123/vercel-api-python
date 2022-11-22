@@ -1,16 +1,17 @@
-from sanic import Sanic, response
-from sanic.response import HTTPResponse, text
-from sanic.request import Request
+from sanic import Sanic
+from sanic.response import redirect, text
 
-app = Sanic('api')
+app = Sanic('vercel-sanic-test')
 
 
-@app.get("/")
-@app.route('/<path:path>')
-async def index(request: Request, path='') -> HTTPResponse:
-    # return text("Done.")
-    print(path)
-    return text('hello sanic.')
+@app.route('/')
+async def index(request):
+    return redirect('https://vercel.com/')
+
+
+@app.route('/ping')
+async def pong(request):
+    return text('pong!')
 
 if __name__ == '__main__':
     app.run(auto_reload=True, port=8000)
