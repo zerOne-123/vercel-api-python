@@ -3,9 +3,9 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.route('/api/fastapi')
+@app.get("/api/fastapi")
 def main():
     return {
         "message": "Hello my friend",
-        'a': __name__
+        "a": __name__
     }
