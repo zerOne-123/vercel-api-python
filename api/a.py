@@ -2,7 +2,7 @@ from sanic import Sanic, response
 from sanic.response import HTTPResponse, text
 from sanic.request import Request
 
-app = Sanic(__name__)
+app = Sanic('api')
 
 @app.get("/")
 @app.route('/<path:path>')
