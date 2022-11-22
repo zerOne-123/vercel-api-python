@@ -9,4 +9,4 @@ app = Sanic('api')
 async def index(request: Request, path='') -> HTTPResponse:
     # return text("Done.")
     print(path)
-    return response.text('hello sanic.')
+    return text('hello sanic.')
