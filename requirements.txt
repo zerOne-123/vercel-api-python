@@ -1,5 +1,5 @@
 # Flask
 # requests
 # pycryptodome
-# sanic
-fastapi
+sanic
+# fastapi
