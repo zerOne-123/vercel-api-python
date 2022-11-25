@@ -4,7 +4,7 @@
 
 ## 最简单例子
 
-``` bash
+``` 
 ├── api
 |  ├── js.js
 |  ├── py.py
@@ -44,7 +44,7 @@ class handler(BaseHTTPRequestHandler):
 > 文档：<https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/node-js>  
 > nodejs api 文档：<https://nodejs.org/api/>
 
-```bash
+```
 ├── api
 |  ├── hello.js
 └── package.json		// 添加模块
@@ -100,7 +100,7 @@ module.exports = (req, res) => {
 > 文档：<https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python>  
 > Python 文档：<https://docs.python.org/zh-cn/3.9/index.html>
 
-```bash
+```
 ├── api
 |  ├── base.py
 |  ├── flask.py
@@ -135,6 +135,7 @@ class handler(BaseHTTPRequestHandler):
 ```python
 # api/flask.py	Web 服务器网关接口
 from flask import Flask, Response
+
 app = Flask(__name__)
 
 @app.route('/<path:path>')
@@ -142,7 +143,7 @@ def catch_all(path):
     return Response("<h1>Flask</h1><p>You visited: /%s</p>" % (path), mimetype="text/html")
 ```
 
-> flask 文档：<https://dormousehole.readthedocs.io/en/latest/>
+> Flask 文档：<https://dormousehole.readthedocs.io/en/latest/>
 
 ```python
 # api/fastapi.py	异步服务器网关接口
@@ -155,4 +156,20 @@ async def root(path):
     return {"message": "Hello World", "path": path}
 ```
 
-> fastapi 文档：<https://fastapi.tiangolo.com/zh/>
+> FastAPI 文档：<https://fastapi.tiangolo.com/zh/>
+
+## 本项目详解
+
+```
+├── api					// 里面放 api 项目文件，可以嵌套目录
+├── templates			// 一些简单的模板
+|  ├── base.js
+|  ├── base.py
+|  ├── fastapi.py
+|  ├── flask.py
+└── package.json		// 用于添加 npm 模块包
+└── package-lock.json	// 该文件通过 npm 命令添加模块会自动生成
+└── requirements.txt	// 用于添加 py 模块包
+└── vercel.json			// vercel 配置文件
+```
+

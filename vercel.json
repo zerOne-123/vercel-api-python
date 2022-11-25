@@ -1,9 +1,5 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/README.md" },
-    {
-      "source": "/(.*)",
-      "destination": "/api"
-    }
+    { "source": "/", "destination": "/index.html" }
   ]
 }
