@@ -3,6 +3,6 @@ from sanic.response import json
 app = Sanic('api')
 
 
-@app.route('/<path:path>')
+@app.get('/<path:path>')
 async def index(request, path=""):
     return json({'hello': path})
